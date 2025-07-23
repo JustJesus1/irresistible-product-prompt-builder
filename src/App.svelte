@@ -77,7 +77,3 @@ Make the reader feel seen and empowered.
     margin-top: 1em;
   }
 </style>
-
-    margin-top: 1em;
-  }
-</style>
