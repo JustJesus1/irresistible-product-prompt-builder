@@ -4,6 +4,22 @@
   let transformation = "";
   let format = "";
   let irresistible = "";
+
+  $: generatedPrompt = `
+Create a ${format} for ${audience} who are struggling with ${struggle}.
+Help them achieve ${transformation} in a way that feels exciting and irresistible.
+Make sure it includes ${irresistible}.
+
+Use a warm, clear, and motivating tone.
+Format it for easy delivery as a digital product.
+Make the reader feel seen and empowered.
+  `;
+
+  function copyToClipboard() {
+    navigator.clipboard.writeText(generatedPrompt)
+      .then(() => alert("✅ Prompt copied to clipboard!"))
+      .catch(err => alert("❌ Failed to copy. Please try again."));
+  }
 </script>
 
 <main style="max-width: 700px; margin: auto; font-family: sans-serif;">
@@ -39,14 +55,12 @@
 
   <h2>✨ Your ChatGPT Prompt</h2>
   <pre style="white-space: pre-wrap; background: #f9f9f9; padding: 1em; border-radius: 8px;">
-Create a {format} for {audience} who are struggling with {struggle}.
-Help them achieve {transformation} in a way that feels exciting and irresistible.
-Make sure it includes {irresistible}.
-
-Use a warm, clear, and motivating tone.
-Format it for easy delivery as a digital product.
-Make the reader feel seen and empowered.
+{generatedPrompt}
   </pre>
+
+  <button on:click={copyToClipboard} style="margin-top: 10px; padding: 0.5em 1em; background-color: #4caf50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    📋 Copy to Clipboard
+  </button>
 </main>
 
 <style>
@@ -57,8 +71,13 @@ Make the reader feel seen and empowered.
     padding: 0.5em;
     font-size: 1em;
   }
+
   label {
     display: block;
+    margin-top: 1em;
+  }
+</style>
+
     margin-top: 1em;
   }
 </style>
