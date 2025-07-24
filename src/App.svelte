@@ -134,12 +134,4 @@ Make the reader feel seen and empowered.
     background-color: #a84562;
   }
 </style>
-    font-size: 1em;
-  }
-
-   label {
-    display: block;
-    margin-top: 1em;
-  }
-</style>
 
