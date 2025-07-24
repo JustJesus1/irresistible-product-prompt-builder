@@ -23,7 +23,7 @@ Make the reader feel seen and empowered.
 </script>
 
 <main>
-  <img src="/So Pretty Logo (1).png" alt="So Pretty Digital Logo" class="logo" />
+  <img src="/logo.png" alt="So Pretty Logo" class="logo" />
 
   <h1>🎯 Irresistible Digital Product Prompt Builder</h1>
   <p class="intro">Fill out the fields below to generate a powerful ChatGPT prompt for your product idea:</p>
